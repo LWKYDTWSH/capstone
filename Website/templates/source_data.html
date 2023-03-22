@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset = 'UTF-8'>
+    <title>Movies Data</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <script src="static/js/app.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+  </head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Tableau</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/tableau">Visualization 1</a>
+              <a class="dropdown-item" href="/tableau2">Visualization 2</a>
+              <a class="dropdown-item" href="/tableau3">Visualization 3</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/machine_learning">Machine Learning</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Data Info</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/source_data">Data Table</a>
+              <a class="dropdown-item" href="/works_cited">Work Cited</a>
+              <a class="dropdown-item" href="/pdf">Executive Summary</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about_us">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Outer Container -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-36">
+                <div class="card border-primary mb-3">
+                    <div class="card-header">
+                        <h1>Data</h1> -->
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p><em>This data is all the data from the project.</em></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <table border="1" class="dataframe">
+                                    <thead>
+                                      <tr style="text-align: right;">
+                                        <th/>
+                                        <th>budget</th>
+                                        <th>popularity</th>
+                                        <th>release_date</th>
+                                        <th>revenue</th>
+                                        <th>runtime</th>
+                                        <th>title</th>
+                                        <th>vote_average</th>
+                                        <th>vote_count</th>
+                                        <th>genre</th>
+                                        <th>production_company</th>
+                                        <th>production_country</th>
+                                        <th>spoken_language</th>
+                                        <th>release_year</th>
+                                        <th>release_month</th>
+                                        <th>release_dayofweek</th>
+                                        <th>release_is_weekend</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th>20073</th>
+                                        <td>0.0</td>
+                                        <td>2.382734</td>
+                                        <td>2014-08-09</td>
+                                        <td>0.0</td>
+                                        <td>116.0</td>
+                                        <td>The Fool</td>
+                                        <td>8.1</td>
+                                        <td>36.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Russian</td>
+                                        <td>2014.0</td>
+                                        <td>8.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>22957</th>
+                                        <td>0.0</td>
+                                        <td>6.592284</td>
+                                        <td>2015-01-24</td>
+                                        <td>0.0</td>
+                                        <td>105.0</td>
+                                        <td>With This Ring</td>
+                                        <td>5.5</td>
+                                        <td>23.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2015.0</td>
+                                        <td>1.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>29245</th>
+                                        <td>2494400.0</td>
+                                        <td>1.779393</td>
+                                        <td>2017-01-27</td>
+                                        <td>0.0</td>
+                                        <td>89.0</td>
+                                        <td>The White King</td>
+                                        <td>6.3</td>
+                                        <td>10.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>2017.0</td>
+                                        <td>1.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>16296</th>
+                                        <td>0.0</td>
+                                        <td>6.651607</td>
+                                        <td>2012-02-25</td>
+                                        <td>0.0</td>
+                                        <td>101.0</td>
+                                        <td>Keep the Lights On</td>
+                                        <td>5.4</td>
+                                        <td>25.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>Other</td>
+                                        <td>2012.0</td>
+                                        <td>2.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>18641</th>
+                                        <td>0.0</td>
+                                        <td>0.142022</td>
+                                        <td>1942-08-18</td>
+                                        <td>0.0</td>
+                                        <td>58.0</td>
+                                        <td>Busses Roar</td>
+                                        <td>8.0</td>
+                                        <td>1.0</td>
+                                        <td>Action</td>
+                                        <td>Warner Bros.</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1942.0</td>
+                                        <td>8.0</td>
+                                        <td>1.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>13209</th>
+                                        <td>0.0</td>
+                                        <td>1.168074</td>
+                                        <td>1976-09-01</td>
+                                        <td>0.0</td>
+                                        <td>87.0</td>
+                                        <td>Massacre at Central High</td>
+                                        <td>6.3</td>
+                                        <td>7.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1976.0</td>
+                                        <td>9.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>27166</th>
+                                        <td>0.0</td>
+                                        <td>0.000019</td>
+                                        <td>1970-08-02</td>
+                                        <td>0.0</td>
+                                        <td>101.0</td>
+                                        <td>May Morning</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>Italy</td>
+                                        <td>English</td>
+                                        <td>1970.0</td>
+                                        <td>8.0</td>
+                                        <td>6.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>30319</th>
+                                        <td>0.0</td>
+                                        <td>1.069205</td>
+                                        <td>2008-10-11</td>
+                                        <td>0.0</td>
+                                        <td>83.0</td>
+                                        <td>Fist of the North Star: The Legend of Kenshiro</td>
+                                        <td>5.6</td>
+                                        <td>5.0</td>
+                                        <td>Animation</td>
+                                        <td>Other</td>
+                                        <td>Japan</td>
+                                        <td>Japanese</td>
+                                        <td>2008.0</td>
+                                        <td>10.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>11242</th>
+                                        <td>0.0</td>
+                                        <td>5.256960</td>
+                                        <td>2008-07-18</td>
+                                        <td>188126.0</td>
+                                        <td>98.0</td>
+                                        <td>Repo! The Genetic Opera</td>
+                                        <td>6.7</td>
+                                        <td>103.0</td>
+                                        <td>Horror</td>
+                                        <td>Lions Gate Films</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2008.0</td>
+                                        <td>7.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>3396</th>
+                                        <td>0.0</td>
+                                        <td>1.375675</td>
+                                        <td>1999-01-01</td>
+                                        <td>0.0</td>
+                                        <td>112.0</td>
+                                        <td>Nowhere to Hide</td>
+                                        <td>6.8</td>
+                                        <td>15.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>1999.0</td>
+                                        <td>1.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>16795</th>
+                                        <td>0.0</td>
+                                        <td>4.011610</td>
+                                        <td>2012-09-03</td>
+                                        <td>0.0</td>
+                                        <td>89.0</td>
+                                        <td>Beverly Hills Chihuahua 3 - Viva La Fiesta!</td>
+                                        <td>5.8</td>
+                                        <td>33.0</td>
+                                        <td>Comedy</td>
+                                        <td>Walt Disney Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>Other</td>
+                                        <td>2012.0</td>
+                                        <td>9.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>3776</th>
+                                        <td>20000000.0</td>
+                                        <td>4.619593</td>
+                                        <td>1988-03-25</td>
+                                        <td>51684798.0</td>
+                                        <td>106.0</td>
+                                        <td>Biloxi Blues</td>
+                                        <td>6.4</td>
+                                        <td>72.0</td>
+                                        <td>Comedy</td>
+                                        <td>Universal Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1988.0</td>
+                                        <td>3.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>15429</th>
+                                        <td>20000000.0</td>
+                                        <td>3.174512</td>
+                                        <td>2011-04-14</td>
+                                        <td>17479.0</td>
+                                        <td>113.0</td>
+                                        <td>5 Days of War</td>
+                                        <td>5.8</td>
+                                        <td>63.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2011.0</td>
+                                        <td>4.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>8561</th>
+                                        <td>0.0</td>
+                                        <td>7.132709</td>
+                                        <td>2002-09-23</td>
+                                        <td>0.0</td>
+                                        <td>120.0</td>
+                                        <td>Solino</td>
+                                        <td>7.0</td>
+                                        <td>12.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>Germany</td>
+                                        <td>Deutsch</td>
+                                        <td>2002.0</td>
+                                        <td>9.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>8374</th>
+                                        <td>0.0</td>
+                                        <td>0.944547</td>
+                                        <td>2004-07-22</td>
+                                        <td>0.0</td>
+                                        <td>95.0</td>
+                                        <td>Vares: Private Eye</td>
+                                        <td>6.2</td>
+                                        <td>16.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>2004.0</td>
+                                        <td>7.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>26707</th>
+                                        <td>0.0</td>
+                                        <td>1.395260</td>
+                                        <td>2009-05-18</td>
+                                        <td>0.0</td>
+                                        <td>90.0</td>
+                                        <td>Daniel &amp; Ana</td>
+                                        <td>5.9</td>
+                                        <td>11.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>2009.0</td>
+                                        <td>5.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>27669</th>
+                                        <td>0.0</td>
+                                        <td>5.453322</td>
+                                        <td>2016-04-22</td>
+                                        <td>0.0</td>
+                                        <td>100.0</td>
+                                        <td>Special Correspondents</td>
+                                        <td>5.6</td>
+                                        <td>159.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United Kingdom</td>
+                                        <td>English</td>
+                                        <td>2016.0</td>
+                                        <td>4.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>3122</th>
+                                        <td>17000000.0</td>
+                                        <td>7.290872</td>
+                                        <td>1987-03-06</td>
+                                        <td>17185632.0</td>
+                                        <td>113.0</td>
+                                        <td>Angel Heart</td>
+                                        <td>7.0</td>
+                                        <td>326.0</td>
+                                        <td>Horror</td>
+                                        <td>Columbia Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1987.0</td>
+                                        <td>3.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>22197</th>
+                                        <td>0.0</td>
+                                        <td>3.574703</td>
+                                        <td>1969-03-07</td>
+                                        <td>0.0</td>
+                                        <td>115.0</td>
+                                        <td>The Brain</td>
+                                        <td>7.1</td>
+                                        <td>37.0</td>
+                                        <td>Adventure</td>
+                                        <td>Paramount Pictures</td>
+                                        <td>France</td>
+                                        <td>English</td>
+                                        <td>1969.0</td>
+                                        <td>3.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>3847</th>
+                                        <td>0.0</td>
+                                        <td>8.575666</td>
+                                        <td>1988-06-17</td>
+                                        <td>808114.0</td>
+                                        <td>95.0</td>
+                                        <td>Waxwork</td>
+                                        <td>5.7</td>
+                                        <td>71.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1988.0</td>
+                                        <td>6.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>19973</th>
+                                        <td>0.0</td>
+                                        <td>14.921478</td>
+                                        <td>2014-11-07</td>
+                                        <td>0.0</td>
+                                        <td>88.0</td>
+                                        <td>A Merry Friggin\' Christmas</td>
+                                        <td>4.7</td>
+                                        <td>68.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2014.0</td>
+                                        <td>11.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>15569</th>
+                                        <td>0.0</td>
+                                        <td>7.692815</td>
+                                        <td>2012-07-25</td>
+                                        <td>9128263.0</td>
+                                        <td>104.0</td>
+                                        <td>Ruby Sparks</td>
+                                        <td>7.0</td>
+                                        <td>546.0</td>
+                                        <td>Comedy</td>
+                                        <td>Twentieth Century Fox Film Corporation</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2012.0</td>
+                                        <td>7.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>5654</th>
+                                        <td>0.0</td>
+                                        <td>1.903143</td>
+                                        <td>1976-10-31</td>
+                                        <td>0.0</td>
+                                        <td>91.0</td>
+                                        <td>God Told Me To</td>
+                                        <td>5.1</td>
+                                        <td>22.0</td>
+                                        <td>Horror</td>
+                                        <td>Walt Disney Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1976.0</td>
+                                        <td>10.0</td>
+                                        <td>6.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>18109</th>
+                                        <td>0.0</td>
+                                        <td>8.488578</td>
+                                        <td>1981-10-01</td>
+                                        <td>0.0</td>
+                                        <td>102.0</td>
+                                        <td>Two Queens and One Consort</td>
+                                        <td>5.3</td>
+                                        <td>5.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>1981.0</td>
+                                        <td>10.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>2518</th>
+                                        <td>0.0</td>
+                                        <td>5.964323</td>
+                                        <td>1999-11-05</td>
+                                        <td>0.0</td>
+                                        <td>107.0</td>
+                                        <td>American Movie</td>
+                                        <td>7.7</td>
+                                        <td>57.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1999.0</td>
+                                        <td>11.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>23007</th>
+                                        <td>0.0</td>
+                                        <td>0.627079</td>
+                                        <td>1937-09-03</td>
+                                        <td>0.0</td>
+                                        <td>92.0</td>
+                                        <td>Souls at Sea</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>Adventure</td>
+                                        <td>Paramount Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1937.0</td>
+                                        <td>9.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>9701</th>
+                                        <td>10000000.0</td>
+                                        <td>11.951258</td>
+                                        <td>2006-12-01</td>
+                                        <td>0.0</td>
+                                        <td>93.0</td>
+                                        <td>Turistas</td>
+                                        <td>5.3</td>
+                                        <td>197.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2006.0</td>
+                                        <td>12.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>22570</th>
+                                        <td>0.0</td>
+                                        <td>0.880222</td>
+                                        <td>1974-03-06</td>
+                                        <td>0.0</td>
+                                        <td>89.0</td>
+                                        <td>The Body</td>
+                                        <td>6.0</td>
+                                        <td>1.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Italy</td>
+                                        <td>Italiano</td>
+                                        <td>1974.0</td>
+                                        <td>3.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>12406</th>
+                                        <td>0.0</td>
+                                        <td>1.659274</td>
+                                        <td>2001-09-28</td>
+                                        <td>0.0</td>
+                                        <td>89.0</td>
+                                        <td>Mike Bassett: England Manager</td>
+                                        <td>7.2</td>
+                                        <td>15.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United Kingdom</td>
+                                        <td>English</td>
+                                        <td>2001.0</td>
+                                        <td>9.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>10090</th>
+                                        <td>14000000.0</td>
+                                        <td>3.794133</td>
+                                        <td>1985-12-09</td>
+                                        <td>0.0</td>
+                                        <td>187.0</td>
+                                        <td>Alice in Wonderland</td>
+                                        <td>6.3</td>
+                                        <td>15.0</td>
+                                        <td>Animation</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1985.0</td>
+                                        <td>12.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>25651</th>
+                                        <td>0.0</td>
+                                        <td>0.284147</td>
+                                        <td>1990-11-05</td>
+                                        <td>0.0</td>
+                                        <td>98.0</td>
+                                        <td>Metamorphosis : The Alien Factor</td>
+                                        <td>5.8</td>
+                                        <td>6.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1990.0</td>
+                                        <td>11.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>15714</th>
+                                        <td>0.0</td>
+                                        <td>6.032041</td>
+                                        <td>2012-09-21</td>
+                                        <td>0.0</td>
+                                        <td>111.0</td>
+                                        <td>Trouble with the Curve</td>
+                                        <td>6.6</td>
+                                        <td>379.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2012.0</td>
+                                        <td>9.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>1921</th>
+                                        <td>3500000.0</td>
+                                        <td>5.732016</td>
+                                        <td>1990-05-03</td>
+                                        <td>16324573.0</td>
+                                        <td>93.0</td>
+                                        <td>Tales from the Darkside: The Movie</td>
+                                        <td>5.8</td>
+                                        <td>92.0</td>
+                                        <td>Horror</td>
+                                        <td>Paramount Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1990.0</td>
+                                        <td>5.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>16551</th>
+                                        <td>0.0</td>
+                                        <td>0.885458</td>
+                                        <td>1917-06-25</td>
+                                        <td>0.0</td>
+                                        <td>22.0</td>
+                                        <td>The Rough House</td>
+                                        <td>5.6</td>
+                                        <td>8.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1917.0</td>
+                                        <td>6.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>17471</th>
+                                        <td>0.0</td>
+                                        <td>0.519774</td>
+                                        <td>1985-04-12</td>
+                                        <td>0.0</td>
+                                        <td>80.0</td>
+                                        <td>Crime Wave</td>
+                                        <td>5.9</td>
+                                        <td>7.0</td>
+                                        <td>Adventure</td>
+                                        <td>Other</td>
+                                        <td>Canada</td>
+                                        <td>English</td>
+                                        <td>1985.0</td>
+                                        <td>4.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>14307</th>
+                                        <td>50000000.0</td>
+                                        <td>10.246173</td>
+                                        <td>2011-07-29</td>
+                                        <td>142851197.0</td>
+                                        <td>118.0</td>
+                                        <td>Crazy, Stupid, Love.</td>
+                                        <td>7.0</td>
+                                        <td>2522.0</td>
+                                        <td>Comedy</td>
+                                        <td>Warner Bros.</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2011.0</td>
+                                        <td>7.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>22307</th>
+                                        <td>0.0</td>
+                                        <td>0.115498</td>
+                                        <td>1985-09-05</td>
+                                        <td>0.0</td>
+                                        <td>90.0</td>
+                                        <td>My American Cousin</td>
+                                        <td>4.7</td>
+                                        <td>3.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>Canada</td>
+                                        <td>English</td>
+                                        <td>1985.0</td>
+                                        <td>9.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>19415</th>
+                                        <td>0.0</td>
+                                        <td>4.086148</td>
+                                        <td>2006-11-23</td>
+                                        <td>0.0</td>
+                                        <td>133.0</td>
+                                        <td>Battle of the Warriors</td>
+                                        <td>6.3</td>
+                                        <td>16.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Chinese</td>
+                                        <td>2006.0</td>
+                                        <td>11.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>9309</th>
+                                        <td>160000000.0</td>
+                                        <td>6.581669</td>
+                                        <td>2006-05-12</td>
+                                        <td>181674817.0</td>
+                                        <td>99.0</td>
+                                        <td>Poseidon</td>
+                                        <td>5.5</td>
+                                        <td>594.0</td>
+                                        <td>Adventure</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2006.0</td>
+                                        <td>5.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>26104</th>
+                                        <td>0.0</td>
+                                        <td>0.843072</td>
+                                        <td>2012-12-26</td>
+                                        <td>0.0</td>
+                                        <td>78.0</td>
+                                        <td>Gone Fishing</td>
+                                        <td>4.8</td>
+                                        <td>4.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Español</td>
+                                        <td>2012.0</td>
+                                        <td>12.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>24880</th>
+                                        <td>0.0</td>
+                                        <td>2.435190</td>
+                                        <td>2015-04-06</td>
+                                        <td>1236094.0</td>
+                                        <td>103.0</td>
+                                        <td>Beyond the Mask</td>
+                                        <td>5.7</td>
+                                        <td>24.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2015.0</td>
+                                        <td>4.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>1427</th>
+                                        <td>80000000.0</td>
+                                        <td>6.537407</td>
+                                        <td>1997-12-25</td>
+                                        <td>17626234.0</td>
+                                        <td>177.0</td>
+                                        <td>The Postman</td>
+                                        <td>6.1</td>
+                                        <td>306.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1997.0</td>
+                                        <td>12.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>6933</th>
+                                        <td>20000000.0</td>
+                                        <td>5.946085</td>
+                                        <td>2004-08-13</td>
+                                        <td>29170410.0</td>
+                                        <td>90.0</td>
+                                        <td>Yu-Gi-Oh! The Movie</td>
+                                        <td>5.4</td>
+                                        <td>71.0</td>
+                                        <td>Adventure</td>
+                                        <td>Other</td>
+                                        <td>Japan</td>
+                                        <td>English</td>
+                                        <td>2004.0</td>
+                                        <td>8.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>13724</th>
+                                        <td>0.0</td>
+                                        <td>0.812881</td>
+                                        <td>1976-08-12</td>
+                                        <td>0.0</td>
+                                        <td>107.0</td>
+                                        <td>The Devil\'s Playground</td>
+                                        <td>8.0</td>
+                                        <td>7.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>1976.0</td>
+                                        <td>8.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>27706</th>
+                                        <td>0.0</td>
+                                        <td>2.105854</td>
+                                        <td>1972-12-13</td>
+                                        <td>0.0</td>
+                                        <td>81.0</td>
+                                        <td>Tintin and the Lake of Sharks</td>
+                                        <td>6.0</td>
+                                        <td>16.0</td>
+                                        <td>Adventure</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Français</td>
+                                        <td>1972.0</td>
+                                        <td>12.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>25676</th>
+                                        <td>0.0</td>
+                                        <td>0.148508</td>
+                                        <td>1980-07-28</td>
+                                        <td>0.0</td>
+                                        <td>88.0</td>
+                                        <td>Petrovka Street, Number 38</td>
+                                        <td>6.0</td>
+                                        <td>1.0</td>
+                                        <td>Crime</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Russian</td>
+                                        <td>1980.0</td>
+                                        <td>7.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>16207</th>
+                                        <td>8000000.0</td>
+                                        <td>3.777176</td>
+                                        <td>2012-06-07</td>
+                                        <td>0.0</td>
+                                        <td>94.0</td>
+                                        <td>Soldiers of Fortune</td>
+                                        <td>4.8</td>
+                                        <td>56.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2012.0</td>
+                                        <td>6.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>15162</th>
+                                        <td>0.0</td>
+                                        <td>3.653474</td>
+                                        <td>2010-12-20</td>
+                                        <td>0.0</td>
+                                        <td>106.0</td>
+                                        <td>The Women on the 6th Floor</td>
+                                        <td>6.6</td>
+                                        <td>90.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Français</td>
+                                        <td>2010.0</td>
+                                        <td>12.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>20478</th>
+                                        <td>0.0</td>
+                                        <td>3.022988</td>
+                                        <td>1955-12-21</td>
+                                        <td>0.0</td>
+                                        <td>88.0</td>
+                                        <td>The Indian Fighter</td>
+                                        <td>5.7</td>
+                                        <td>11.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1955.0</td>
+                                        <td>12.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>23124</th>
+                                        <td>0.0</td>
+                                        <td>1.713609</td>
+                                        <td>1973-10-25</td>
+                                        <td>0.0</td>
+                                        <td>110.0</td>
+                                        <td>The Knock Out Cop</td>
+                                        <td>6.1</td>
+                                        <td>36.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Italiano</td>
+                                        <td>1973.0</td>
+                                        <td>10.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>29932</th>
+                                        <td>0.0</td>
+                                        <td>0.793461</td>
+                                        <td>1994-06-01</td>
+                                        <td>0.0</td>
+                                        <td>99.0</td>
+                                        <td>The Watermill Princess</td>
+                                        <td>5.5</td>
+                                        <td>3.0</td>
+                                        <td>Animation</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>1994.0</td>
+                                        <td>6.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>12838</th>
+                                        <td>0.0</td>
+                                        <td>0.785882</td>
+                                        <td>1969-08-27</td>
+                                        <td>0.0</td>
+                                        <td>101.0</td>
+                                        <td>The Rain People</td>
+                                        <td>5.5</td>
+                                        <td>10.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1969.0</td>
+                                        <td>8.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>19134</th>
+                                        <td>0.0</td>
+                                        <td>0.001393</td>
+                                        <td>1985-01-01</td>
+                                        <td>0.0</td>
+                                        <td>10.0</td>
+                                        <td>The Big Snit</td>
+                                        <td>7.1</td>
+                                        <td>10.0</td>
+                                        <td>Animation</td>
+                                        <td>Other</td>
+                                        <td>Canada</td>
+                                        <td>English</td>
+                                        <td>1985.0</td>
+                                        <td>1.0</td>
+                                        <td>1.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>13687</th>
+                                        <td>0.0</td>
+                                        <td>1.701368</td>
+                                        <td>1923-01-22</td>
+                                        <td>0.0</td>
+                                        <td>22.0</td>
+                                        <td>The Balloonatic</td>
+                                        <td>5.8</td>
+                                        <td>12.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1923.0</td>
+                                        <td>1.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>28469</th>
+                                        <td>0.0</td>
+                                        <td>0.001177</td>
+                                        <td>1929-07-29</td>
+                                        <td>0.0</td>
+                                        <td>65.0</td>
+                                        <td>Komunaris chibukhi</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Russian</td>
+                                        <td>1929.0</td>
+                                        <td>7.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>24247</th>
+                                        <td>100000.0</td>
+                                        <td>4.832631</td>
+                                        <td>2015-07-10</td>
+                                        <td>702354.0</td>
+                                        <td>87.0</td>
+                                        <td>Tangerine</td>
+                                        <td>6.9</td>
+                                        <td>166.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>Other</td>
+                                        <td>2015.0</td>
+                                        <td>7.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>13035</th>
+                                        <td>0.0</td>
+                                        <td>0.732999</td>
+                                        <td>1921-04-14</td>
+                                        <td>0.0</td>
+                                        <td>79.0</td>
+                                        <td>The Wildcat</td>
+                                        <td>6.3</td>
+                                        <td>3.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>Germany</td>
+                                        <td>Other</td>
+                                        <td>1921.0</td>
+                                        <td>4.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>12863</th>
+                                        <td>0.0</td>
+                                        <td>0.502239</td>
+                                        <td>1938-03-18</td>
+                                        <td>0.0</td>
+                                        <td>121.0</td>
+                                        <td>The Girl of the Golden West</td>
+                                        <td>3.8</td>
+                                        <td>2.0</td>
+                                        <td>Romance</td>
+                                        <td>Metro-Goldwyn-Mayer (MGM)</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1938.0</td>
+                                        <td>3.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>15584</th>
+                                        <td>0.0</td>
+                                        <td>0.523220</td>
+                                        <td>2004-03-13</td>
+                                        <td>0.0</td>
+                                        <td>13.0</td>
+                                        <td>Oranges</td>
+                                        <td>9.6</td>
+                                        <td>5.0</td>
+                                        <td>Romance</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2004.0</td>
+                                        <td>3.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>3639</th>
+                                        <td>0.0</td>
+                                        <td>10.313171</td>
+                                        <td>1959-06-11</td>
+                                        <td>0.0</td>
+                                        <td>115.0</td>
+                                        <td>The Horse Soldiers</td>
+                                        <td>6.8</td>
+                                        <td>40.0</td>
+                                        <td>Action</td>
+                                        <td>United Artists</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1959.0</td>
+                                        <td>6.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>27489</th>
+                                        <td>0.0</td>
+                                        <td>0.192623</td>
+                                        <td>1955-08-24</td>
+                                        <td>0.0</td>
+                                        <td>100.0</td>
+                                        <td>Rio 100 Degrees F.</td>
+                                        <td>3.0</td>
+                                        <td>2.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>1955.0</td>
+                                        <td>8.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>23356</th>
+                                        <td>0.0</td>
+                                        <td>0.256005</td>
+                                        <td>2005-07-30</td>
+                                        <td>0.0</td>
+                                        <td>99.0</td>
+                                        <td>Bill Maher: I\'m Swiss</td>
+                                        <td>6.2</td>
+                                        <td>5.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2005.0</td>
+                                        <td>7.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>28695</th>
+                                        <td>15050000.0</td>
+                                        <td>1.423358</td>
+                                        <td>2016-08-11</td>
+                                        <td>16180000.0</td>
+                                        <td>155.0</td>
+                                        <td>Mohenjo Daro</td>
+                                        <td>6.7</td>
+                                        <td>26.0</td>
+                                        <td>Adventure</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>2016.0</td>
+                                        <td>8.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>28137</th>
+                                        <td>20000000.0</td>
+                                        <td>1.393826</td>
+                                        <td>2011-01-31</td>
+                                        <td>0.0</td>
+                                        <td>100.0</td>
+                                        <td>You and I</td>
+                                        <td>4.9</td>
+                                        <td>18.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>2011.0</td>
+                                        <td>1.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>12706</th>
+                                        <td>1987650.0</td>
+                                        <td>7.389437</td>
+                                        <td>2010-09-24</td>
+                                        <td>19152480.0</td>
+                                        <td>94.0</td>
+                                        <td>Buried</td>
+                                        <td>6.6</td>
+                                        <td>853.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>2010.0</td>
+                                        <td>9.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>13037</th>
+                                        <td>0.0</td>
+                                        <td>2.011489</td>
+                                        <td>1960-05-01</td>
+                                        <td>0.0</td>
+                                        <td>130.0</td>
+                                        <td>The Trials of Oscar Wilde</td>
+                                        <td>6.3</td>
+                                        <td>7.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>United Kingdom</td>
+                                        <td>English</td>
+                                        <td>1960.0</td>
+                                        <td>5.0</td>
+                                        <td>6.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>20851</th>
+                                        <td>0.0</td>
+                                        <td>0.906872</td>
+                                        <td>1957-10-08</td>
+                                        <td>0.0</td>
+                                        <td>94.0</td>
+                                        <td>Until They Sail</td>
+                                        <td>5.8</td>
+                                        <td>4.0</td>
+                                        <td>Drama</td>
+                                        <td>Metro-Goldwyn-Mayer (MGM)</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1957.0</td>
+                                        <td>10.0</td>
+                                        <td>1.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>12313</th>
+                                        <td>0.0</td>
+                                        <td>0.375724</td>
+                                        <td>1991-12-18</td>
+                                        <td>0.0</td>
+                                        <td>91.0</td>
+                                        <td>Pyrates</td>
+                                        <td>0.0</td>
+                                        <td>0.0</td>
+                                        <td>Romance</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1991.0</td>
+                                        <td>12.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>12281</th>
+                                        <td>0.0</td>
+                                        <td>0.491306</td>
+                                        <td>1938-09-07</td>
+                                        <td>0.0</td>
+                                        <td>133.0</td>
+                                        <td>The Baker\'s Wife</td>
+                                        <td>7.9</td>
+                                        <td>8.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Italiano</td>
+                                        <td>1938.0</td>
+                                        <td>9.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>23924</th>
+                                        <td>0.0</td>
+                                        <td>2.612480</td>
+                                        <td>1998-11-07</td>
+                                        <td>0.0</td>
+                                        <td>110.0</td>
+                                        <td>Jinnah</td>
+                                        <td>6.5</td>
+                                        <td>4.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>1998.0</td>
+                                        <td>11.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>4335</th>
+                                        <td>0.0</td>
+                                        <td>1.528577</td>
+                                        <td>1975-03-15</td>
+                                        <td>0.0</td>
+                                        <td>136.0</td>
+                                        <td>Funny Lady</td>
+                                        <td>5.1</td>
+                                        <td>24.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1975.0</td>
+                                        <td>3.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>24876</th>
+                                        <td>0.0</td>
+                                        <td>0.730181</td>
+                                        <td>1950-11-01</td>
+                                        <td>0.0</td>
+                                        <td>85.0</td>
+                                        <td>The Jackpot</td>
+                                        <td>5.5</td>
+                                        <td>4.0</td>
+                                        <td>Comedy</td>
+                                        <td>Twentieth Century Fox Film Corporation</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1950.0</td>
+                                        <td>11.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>14967</th>
+                                        <td>25000000.0</td>
+                                        <td>10.595067</td>
+                                        <td>2012-01-12</td>
+                                        <td>63100000.0</td>
+                                        <td>109.0</td>
+                                        <td>Contraband</td>
+                                        <td>6.1</td>
+                                        <td>777.0</td>
+                                        <td>Horror</td>
+                                        <td>Universal Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2012.0</td>
+                                        <td>1.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>5414</th>
+                                        <td>0.0</td>
+                                        <td>4.570894</td>
+                                        <td>1965-12-15</td>
+                                        <td>0.0</td>
+                                        <td>142.0</td>
+                                        <td>The Flight of the Phoenix</td>
+                                        <td>7.0</td>
+                                        <td>70.0</td>
+                                        <td>Adventure</td>
+                                        <td>Twentieth Century Fox Film Corporation</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1965.0</td>
+                                        <td>12.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>24015</th>
+                                        <td>0.0</td>
+                                        <td>1.647437</td>
+                                        <td>1965-12-04</td>
+                                        <td>0.0</td>
+                                        <td>104.0</td>
+                                        <td>Up to His Ears</td>
+                                        <td>6.5</td>
+                                        <td>19.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Français</td>
+                                        <td>1965.0</td>
+                                        <td>12.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>1588</th>
+                                        <td>343000.0</td>
+                                        <td>11.589081</td>
+                                        <td>1955-04-11</td>
+                                        <td>3000000.0</td>
+                                        <td>90.0</td>
+                                        <td>Marty</td>
+                                        <td>7.2</td>
+                                        <td>75.0</td>
+                                        <td>Drama</td>
+                                        <td>United Artists</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1955.0</td>
+                                        <td>4.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>31981</th>
+                                        <td>1254040.0</td>
+                                        <td>0.347806</td>
+                                        <td>2017-07-28</td>
+                                        <td>0.0</td>
+                                        <td>90.0</td>
+                                        <td>Thick Lashes of Lauri Mäntyvaara</td>
+                                        <td>8.0</td>
+                                        <td>1.0</td>
+                                        <td>Romance</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>2017.0</td>
+                                        <td>7.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>28210</th>
+                                        <td>1600000.0</td>
+                                        <td>0.105145</td>
+                                        <td>2016-04-02</td>
+                                        <td>0.0</td>
+                                        <td>125.0</td>
+                                        <td>How to Let Go of the World and Love All the Things Climate Can\'t Change</td>
+                                        <td>4.0</td>
+                                        <td>2.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2016.0</td>
+                                        <td>4.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>16852</th>
+                                        <td>0.0</td>
+                                        <td>3.863016</td>
+                                        <td>2012-07-25</td>
+                                        <td>83519699.0</td>
+                                        <td>135.0</td>
+                                        <td>The Thieves</td>
+                                        <td>6.7</td>
+                                        <td>76.0</td>
+                                        <td>Action</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>2012.0</td>
+                                        <td>7.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>14703</th>
+                                        <td>30000000.0</td>
+                                        <td>1.644817</td>
+                                        <td>2008-01-01</td>
+                                        <td>0.0</td>
+                                        <td>86.0</td>
+                                        <td>A Pain in the Ass</td>
+                                        <td>5.4</td>
+                                        <td>8.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Français</td>
+                                        <td>2008.0</td>
+                                        <td>1.0</td>
+                                        <td>1.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>20589</th>
+                                        <td>130000000.0</td>
+                                        <td>26.882388</td>
+                                        <td>2015-07-14</td>
+                                        <td>519311965.0</td>
+                                        <td>117.0</td>
+                                        <td>Ant-Man</td>
+                                        <td>7.0</td>
+                                        <td>6029.0</td>
+                                        <td>Fantasy</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2015.0</td>
+                                        <td>7.0</td>
+                                        <td>1.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>27557</th>
+                                        <td>0.0</td>
+                                        <td>0.533016</td>
+                                        <td>2012-01-07</td>
+                                        <td>0.0</td>
+                                        <td>270.0</td>
+                                        <td>Penance</td>
+                                        <td>7.3</td>
+                                        <td>6.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>Japan</td>
+                                        <td>Japanese</td>
+                                        <td>2012.0</td>
+                                        <td>1.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>21426</th>
+                                        <td>0.0</td>
+                                        <td>0.036823</td>
+                                        <td>1996-07-18</td>
+                                        <td>0.0</td>
+                                        <td>61.0</td>
+                                        <td>The Lumière Brothers\' First Films</td>
+                                        <td>7.0</td>
+                                        <td>1.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1996.0</td>
+                                        <td>7.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>29236</th>
+                                        <td>75000000.0</td>
+                                        <td>18.311054</td>
+                                        <td>2016-10-13</td>
+                                        <td>220021259.0</td>
+                                        <td>121.0</td>
+                                        <td>Inferno</td>
+                                        <td>5.7</td>
+                                        <td>2316.0</td>
+                                        <td>Horror</td>
+                                        <td>Columbia Pictures</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>2016.0</td>
+                                        <td>10.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>19321</th>
+                                        <td>0.0</td>
+                                        <td>0.308882</td>
+                                        <td>1935-11-29</td>
+                                        <td>0.0</td>
+                                        <td>77.0</td>
+                                        <td>Frisco Kid</td>
+                                        <td>7.7</td>
+                                        <td>3.0</td>
+                                        <td>Adventure</td>
+                                        <td>Warner Bros.</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1935.0</td>
+                                        <td>11.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>13310</th>
+                                        <td>22000000.0</td>
+                                        <td>6.303785</td>
+                                        <td>2010-05-20</td>
+                                        <td>24188922.0</td>
+                                        <td>108.0</td>
+                                        <td>Fair Game</td>
+                                        <td>6.5</td>
+                                        <td>239.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>2010.0</td>
+                                        <td>5.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>3601</th>
+                                        <td>0.0</td>
+                                        <td>1.860018</td>
+                                        <td>2000-09-11</td>
+                                        <td>0.0</td>
+                                        <td>92.0</td>
+                                        <td>Under the Sand</td>
+                                        <td>6.4</td>
+                                        <td>31.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Français</td>
+                                        <td>2000.0</td>
+                                        <td>9.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>1298</th>
+                                        <td>85000000.0</td>
+                                        <td>14.048694</td>
+                                        <td>1997-06-26</td>
+                                        <td>252712101.0</td>
+                                        <td>93.0</td>
+                                        <td>Hercules</td>
+                                        <td>7.3</td>
+                                        <td>1741.0</td>
+                                        <td>Animation</td>
+                                        <td>Walt Disney Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1997.0</td>
+                                        <td>6.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>9558</th>
+                                        <td>0.0</td>
+                                        <td>5.721780</td>
+                                        <td>1940-11-11</td>
+                                        <td>0.0</td>
+                                        <td>105.0</td>
+                                        <td>The Long Voyage Home</td>
+                                        <td>6.4</td>
+                                        <td>18.0</td>
+                                        <td>Action</td>
+                                        <td>United Artists</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1940.0</td>
+                                        <td>11.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>24774</th>
+                                        <td>0.0</td>
+                                        <td>1.593745</td>
+                                        <td>2015-06-10</td>
+                                        <td>0.0</td>
+                                        <td>98.0</td>
+                                        <td>French Blood</td>
+                                        <td>5.9</td>
+                                        <td>35.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>France</td>
+                                        <td>Français</td>
+                                        <td>2015.0</td>
+                                        <td>6.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>22065</th>
+                                        <td>0.0</td>
+                                        <td>1.130017</td>
+                                        <td>2014-09-18</td>
+                                        <td>0.0</td>
+                                        <td>85.0</td>
+                                        <td>The Infinite Man</td>
+                                        <td>5.9</td>
+                                        <td>13.0</td>
+                                        <td>Fantasy</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>English</td>
+                                        <td>2014.0</td>
+                                        <td>9.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>9397</th>
+                                        <td>11000000.0</td>
+                                        <td>8.046375</td>
+                                        <td>1983-08-12</td>
+                                        <td>4491986.0</td>
+                                        <td>109.0</td>
+                                        <td>Curse of the Pink Panther</td>
+                                        <td>3.6</td>
+                                        <td>42.0</td>
+                                        <td>Crime</td>
+                                        <td>United Artists</td>
+                                        <td>United Kingdom</td>
+                                        <td>English</td>
+                                        <td>1983.0</td>
+                                        <td>8.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>19402</th>
+                                        <td>0.0</td>
+                                        <td>0.821633</td>
+                                        <td>1956-10-31</td>
+                                        <td>0.0</td>
+                                        <td>119.0</td>
+                                        <td>Death of a Scoundrel</td>
+                                        <td>5.9</td>
+                                        <td>5.0</td>
+                                        <td>Drama</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1956.0</td>
+                                        <td>10.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>369</th>
+                                        <td>0.0</td>
+                                        <td>14.644772</td>
+                                        <td>1994-04-22</td>
+                                        <td>15240435.0</td>
+                                        <td>99.0</td>
+                                        <td>Bad Girls</td>
+                                        <td>4.6</td>
+                                        <td>61.0</td>
+                                        <td>Action</td>
+                                        <td>Twentieth Century Fox Film Corporation</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1994.0</td>
+                                        <td>4.0</td>
+                                        <td>4.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>30842</th>
+                                        <td>2600000.0</td>
+                                        <td>0.889558</td>
+                                        <td>2015-06-18</td>
+                                        <td>0.0</td>
+                                        <td>100.0</td>
+                                        <td>The Bartender</td>
+                                        <td>5.4</td>
+                                        <td>16.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Russian</td>
+                                        <td>2015.0</td>
+                                        <td>6.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>24750</th>
+                                        <td>0.0</td>
+                                        <td>1.133285</td>
+                                        <td>2005-11-03</td>
+                                        <td>0.0</td>
+                                        <td>142.0</td>
+                                        <td>Garam Masala</td>
+                                        <td>5.4</td>
+                                        <td>16.0</td>
+                                        <td>Comedy</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>Other</td>
+                                        <td>2005.0</td>
+                                        <td>11.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>15575</th>
+                                        <td>0.0</td>
+                                        <td>1.406611</td>
+                                        <td>2004-10-02</td>
+                                        <td>0.0</td>
+                                        <td>98.0</td>
+                                        <td>Infection</td>
+                                        <td>6.4</td>
+                                        <td>28.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>Japan</td>
+                                        <td>Japanese</td>
+                                        <td>2004.0</td>
+                                        <td>10.0</td>
+                                        <td>5.0</td>
+                                        <td>True</td>
+                                      </tr>
+                                      <tr>
+                                        <th>14143</th>
+                                        <td>0.0</td>
+                                        <td>3.990811</td>
+                                        <td>1999-12-27</td>
+                                        <td>0.0</td>
+                                        <td>101.0</td>
+                                        <td>Turbulence 2: Fear of Flying</td>
+                                        <td>4.1</td>
+                                        <td>10.0</td>
+                                        <td>Horror</td>
+                                        <td>Other</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1999.0</td>
+                                        <td>12.0</td>
+                                        <td>0.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>19407</th>
+                                        <td>0.0</td>
+                                        <td>0.943537</td>
+                                        <td>2014-09-18</td>
+                                        <td>0.0</td>
+                                        <td>89.0</td>
+                                        <td>Fat, Sick &amp; Nearly Dead 2</td>
+                                        <td>6.2</td>
+                                        <td>19.0</td>
+                                        <td>Documentary</td>
+                                        <td>Other</td>
+                                        <td>United Kingdom</td>
+                                        <td>English</td>
+                                        <td>2014.0</td>
+                                        <td>9.0</td>
+                                        <td>3.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                      <tr>
+                                        <th>14420</th>
+                                        <td>0.0</td>
+                                        <td>1.096082</td>
+                                        <td>1974-10-09</td>
+                                        <td>0.0</td>
+                                        <td>93.0</td>
+                                        <td>Shanks</td>
+                                        <td>5.7</td>
+                                        <td>5.0</td>
+                                        <td>Fantasy</td>
+                                        <td>Paramount Pictures</td>
+                                        <td>United States of America</td>
+                                        <td>English</td>
+                                        <td>1974.0</td>
+                                        <td>10.0</td>
+                                        <td>2.0</td>
+                                        <td>False</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
